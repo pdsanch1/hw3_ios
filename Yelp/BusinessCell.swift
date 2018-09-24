@@ -19,9 +19,12 @@ class BusinessCell: UITableViewCell {
     @IBOutlet weak var categoriesLabel: UILabel!
     // @IBOutlet weak var categoriesLabel: UILabel!
     
+    var index: Int?
+    
     var business: Business! {
         didSet {    // Observable, whenever business is set do the block
-            nameLabel.text = business.name
+            index = (index!+1) ?? 0
+            nameLabel.text = "\(index!). \(business.name!)"
             distanceLabel.text = business.distance
             addressLabel.text = business.address
             reviewCount.text = "\(business.reviewCount!) Reviews"
@@ -34,6 +37,18 @@ class BusinessCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        thumbImageView.layer.cornerRadius = 3
+        thumbImageView.clipsToBounds=true
+        
+            nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
+//        addressLabel.preferredMaxLayoutWidth=addressLabel.frame.size.width
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
+//        addressLabel.preferredMaxLayoutWidth=addressLabel.frame.size.width
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -23,7 +23,7 @@ class BusinessCell: UITableViewCell {
     
     var business: Business! {
         didSet {    // Observable, whenever business is set do the block
-            index = (index!+1) ?? 0
+            index! += 1
             nameLabel.text = "\(index!). \(business.name!)"
             distanceLabel.text = business.distance
             addressLabel.text = business.address
@@ -31,6 +31,7 @@ class BusinessCell: UITableViewCell {
             categoriesLabel.text = business.categories
             thumbImageView.setImageWith(business.imageURL!)
             ratingImageView.image = business.ratingImage
+            print(nameLabel.text!)
         }
     }
     

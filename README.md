@@ -32,7 +32,7 @@ Business.searchWithTerm("Restaurants", sort: .distance, categories: ["asianfusio
     }
 }
 ```
-# Project 3 - *https://github.com/pdsanch1/hw3_ios*
+# Project 3 - *Yelp search !*
 
 **Name of your app** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
@@ -44,7 +44,7 @@ The following **required** functionality is completed:
 
 - [X ] Table rows for search results should be dynamic height according to the content height. (3pt)
 - [ X] Custom cells should have the proper Auto Layout constraints. (+5pt)
-- [ ] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does). (+2pt)
+- [ X] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does). (+2pt)
 
 The following **stretch** features are implemented:
 
@@ -65,7 +65,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/yQ8BGXY.gif' />
+<img src='https://imgur.com/a/doMZcLm' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
